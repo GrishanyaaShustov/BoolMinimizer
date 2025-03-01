@@ -15,7 +15,10 @@
             <label for="inputField">Введите функцию или её вектор:</label>
             <input type="text" id="inputField" placeholder="Например: 01110110">
 
-            <button type="button" id="toggleKeyboard">Скрыть клавиатуру</button>
+            <!-- Кнопка "Построить" -->
+            <button type="submit">Построить</button>
+
+            <!-- Клавиатура -->
             <div id="keyboard" class="keyboard">
                 <button type="button" class="key">∨</button>
                 <button type="button" class="key">∧</button>
@@ -25,13 +28,15 @@
                 <button type="button" class="key">↔</button>
                 <button type="button" class="key">(</button>
                 <button type="button" class="key">)</button>
+                <button type="button" class="key">w</button>
                 <button type="button" class="key">x</button>
                 <button type="button" class="key">y</button>
                 <button type="button" class="key">z</button>
-                <button type="button" class="key">w</button>
             </div>
 
-            <button type="submit">Построить</button>
+            <!-- Кнопка скрытия/показа клавиатуры -->
+            <button type="button" id="toggleKeyboard">Скрыть клавиатуру</button>
+
         </form>
 
         <div id="output"></div>
