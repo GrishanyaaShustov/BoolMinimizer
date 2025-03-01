@@ -4,21 +4,21 @@ document.getElementById("boolForm").addEventListener("submit", function(event) {
     let input = document.getElementById("inputField").value.trim();
     let outputDiv = document.getElementById("output");
 
-    if (!/^[01∨∧¬⊕→↔↓↑()X₁X₂X₃X₄X₅X₆\s]+$/.test(input)) {
-        outputDiv.innerHTML = "Ошибка: Некорректный ввод";
+    if (/^[01]+$/.test(input) && (input.length & (input.length - 1)) === 0) {
+        let minimized = minimizeBooleanFunction(input.split("").map(Number));
+        outputDiv.innerHTML = "Минимизированное выражение: " + minimized;
+        outputDiv.style.color = "black";
+    } else {
+        outputDiv.innerHTML = "Ошибка: Введите корректный вектор (длина должна быть степенью 2)";
         outputDiv.style.color = "red";
-        return;
     }
-
-    outputDiv.innerHTML = "Введённая функция: " + input;
-    outputDiv.style.color = "black";
 });
 
 // Логика для клавиатуры
 document.getElementById("toggleKeyboard").addEventListener("click", function() {
     let keyboard = document.getElementById("keyboard");
-    if (keyboard.style.display === "none" || keyboard.style.display === "") {
-        keyboard.style.display = "flex";
+    if (keyboard.style.display === "none") {
+        keyboard.style.display = "grid";
         this.innerText = "Скрыть клавиатуру";
     } else {
         keyboard.style.display = "none";
@@ -28,8 +28,6 @@ document.getElementById("toggleKeyboard").addEventListener("click", function() {
 
 document.querySelectorAll(".key").forEach(button => {
     button.addEventListener("click", function() {
-        let inputField = document.getElementById("inputField");
-        inputField.value += this.innerText;
-        inputField.focus();
+        document.getElementById("inputField").value += this.innerText;
     });
 });

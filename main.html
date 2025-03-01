@@ -13,7 +13,7 @@
         <h2>Калькулятор булевых функций</h2>
         <form id="boolForm">
             <label for="inputField">Введите функцию или её вектор:</label>
-            <input type="text" id="inputField" placeholder="Например: ¬x1 ∨ x2">
+            <input type="text" id="inputField" placeholder="Например: 01110110">
 
             <button type="button" id="toggleKeyboard">Скрыть клавиатуру</button>
             <div id="keyboard" class="keyboard">
@@ -23,16 +23,12 @@
                 <button type="button" class="key">⊕</button>
                 <button type="button" class="key">→</button>
                 <button type="button" class="key">↔</button>
-                <button type="button" class="key">↓</button>
-                <button type="button" class="key">↑</button>
                 <button type="button" class="key">(</button>
                 <button type="button" class="key">)</button>
-                <button type="button" class="key">X₁</button>
-                <button type="button" class="key">X₂</button>
-                <button type="button" class="key">X₃</button>
-                <button type="button" class="key">X₄</button>
-                <button type="button" class="key">X₅</button>
-                <button type="button" class="key">X₆</button>
+                <button type="button" class="key">x</button>
+                <button type="button" class="key">y</button>
+                <button type="button" class="key">z</button>
+                <button type="button" class="key">w</button>
             </div>
 
             <button type="submit">Построить</button>
@@ -51,6 +47,7 @@
     </section>
 </main>
 
+<script src="minimization.js"></script>
 <script src="index.js"></script>
 </body>
 </html>
