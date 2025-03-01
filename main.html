@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Минимизация Булевых Функций</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<main>
+    <div class="calculator">
+        <h2>Калькулятор булевых функций</h2>
+        <form id="boolForm">
+            <label for="inputField">Введите функцию или её вектор:</label>
+            <input type="text" id="inputField" placeholder="Например: ¬x1 ∨ x2">
+
+            <button type="button" id="toggleKeyboard">Скрыть клавиатуру</button>
+            <div id="keyboard" class="keyboard">
+                <button type="button" class="key">∨</button>
+                <button type="button" class="key">∧</button>
+                <button type="button" class="key">¬</button>
+                <button type="button" class="key">⊕</button>
+                <button type="button" class="key">→</button>
+                <button type="button" class="key">↔</button>
+                <button type="button" class="key">↓</button>
+                <button type="button" class="key">↑</button>
+                <button type="button" class="key">(</button>
+                <button type="button" class="key">)</button>
+                <button type="button" class="key">X₁</button>
+                <button type="button" class="key">X₂</button>
+                <button type="button" class="key">X₃</button>
+                <button type="button" class="key">X₄</button>
+                <button type="button" class="key">X₅</button>
+                <button type="button" class="key">X₆</button>
+            </div>
+
+            <button type="submit">Построить</button>
+        </form>
+
+        <div id="output"></div>
+    </div>
+
+    <section class="instructions">
+        <h2>Как пользоваться калькулятором</h2>
+        <ul>
+            <li>Введите в поле логическую функцию или её вектор.</li>
+            <li>Используйте клавиатуру для быстрого ввода символов.</li>
+            <li>Нажмите на кнопку "Построить" для расчёта минимизации.</li>
+        </ul>
+    </section>
+</main>
+
+<script src="index.js"></script>
+</body>
+</html>
