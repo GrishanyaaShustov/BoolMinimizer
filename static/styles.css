@@ -69,7 +69,7 @@ button:hover {
     border: none;
     padding: 20px;
     font-size: 20px;
-    font-weight: 15px;
+    font-weight: 15;
     border-radius: 8px;
     cursor: pointer;
     transition: 0.3s;
@@ -110,4 +110,66 @@ button:hover {
     font-size: 16px;
     transition: 0.3s;
     margin-bottom: 10px;
+}
+
+/* Общие стили таблиц */
+.truth-table, .karnaugh-map {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.truth-table th, .truth-table td,
+.karnaugh-map th, .karnaugh-map td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.truth-table th, .karnaugh-map th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.truth-table tr:nth-child(even),
+.karnaugh-map tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.truth-table tr:hover,
+.karnaugh-map tr:hover {
+    background-color: #e0e0e0;
+}
+
+/* Отдельное оформление ячеек карты Карно */
+.karnaugh-map td.one {
+    background-color: #a5d6a7; /* Светло-зеленый */
+    font-weight: bold;
+}
+
+.karnaugh-map td.zero {
+    font-weight: bold;
+}
+
+/* Стили для кнопки Поддержка */
+#helpButton {
+    background: linear-gradient(145deg, #555, #555);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    margin-bottom: 10px;
+}
+
+/* Стили для блока с текстом Поддержки */
+.support-text {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }

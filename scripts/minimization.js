@@ -192,6 +192,7 @@ function minimizeBooleanFunction(vector) {
     if (vector.every(val => val === 1)) return "1";
 
     let mapData = buildKarnaughMap(vector, n);
+    // let mapData = transposeKarnaughMap(buildKarnaughMap(vector, n));
     let candidateGroups = generateCandidateGroups(mapData, n);
     let primeImplicants = filterPrimeImplicants(candidateGroups);
     let cover = selectCover(primeImplicants, vector);
